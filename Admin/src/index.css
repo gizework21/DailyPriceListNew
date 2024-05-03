@@ -1,0 +1,112 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  background-color: #f8f8f8; /* Add a light background color */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #2196f3;
+  font-size: 2rem; /* Increase font size for headers */
+  margin-bottom: 10px;
+} 
+
+/* Apply consistent styling to cards */
+.card {
+  background-color: #fff;
+  border-radius: 12px; /* Rounder corners for cards */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 20px; /* Add padding to cards */
+}
+
+/* Customize the card header */
+.card h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Improve the styling of the television-footer */
+.television-footer {
+  background-color: #333; /* Dark background color */
+  color: #d7a022;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Style the marquee text */
+marquee {
+  font-size: 18px; /* Larger font size */
+  white-space: nowrap;
+  overflow: hidden;
+  color: #d7a022; /* Match the television-footer color */
+}
+
+/* Add a subtle animation to the marquee */
+marquee:hover {
+  animation: marqueeAnimation 5s linear infinite; /* Customize the animation */
+}
+
+@keyframes marqueeAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Add these styles at the end of your existing styles in index.css */
+.table-container {
+  margin-top: 30px;
+}
+
+.table {
+  width: 80%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  /* overflow: hidden; */
+}
+
+.table thead {
+  background-color: #d7a022; /* Orange header background color */
+  color: #fff;
+}
+
+.table th,
+.table td {
+  padding: 8px; /* Adjusted padding for better spacing */
+  text-align: center; /* Center text in both header and body cells */
+  border-bottom: 2px solid #ddd; /* Bolder border */
+  font-size: 20px; /* Keep a consistent font size */
+  /* font-weight: bold; Increased font weight */
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Background color for odd rows */
+}
+
+.table-container {
+  margin-top: 30px; /* Keep only one instance for clarity */
+  margin-bottom: 20px; /* Additional margin for better separation */
+  border-radius: 15px; /* Add border-radius for a rounded appearance */
+  overflow: hidden;
+}
